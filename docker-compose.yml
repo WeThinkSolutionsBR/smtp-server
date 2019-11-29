@@ -1,0 +1,15 @@
+version: '3.1'
+#
+services:
+#
+  smtp:
+    image: wethinksolutionsbr/bacula-smtp:latest
+    restart: unless-stopped
+    environment:
+      MAIL_USER: email@dominio.com.br
+      MAIL_PASS: Senha
+      MAIL_HOST: smtp.dominio.com.br
+      MAIL_PORT: 587
+    ports:
+      - 25:25
+#
